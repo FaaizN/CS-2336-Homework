@@ -14,7 +14,7 @@ public class Problem_2 {
         String SSN = null;
 
         //Create boolean to determine if String is SSN (TRUE) or not (FALSE)
-        boolean check = true;
+        boolean checkSSN = true;
 
         //Create a Scanner object to take user input
         Scanner input = new Scanner(System.in);
@@ -24,9 +24,9 @@ public class Problem_2 {
         SSN = input.nextLine();
 
         //Call the checkSSN function
-        check = checkSSN(SSN, check);
+        checkSSN = checkSSN(SSN, checkSSN);
 
-        if(check == true)
+        if(checkSSN == true)
         {
             System.out.println(SSN + " is a valid social security number");
         }
