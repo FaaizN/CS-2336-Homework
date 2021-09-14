@@ -2,12 +2,6 @@ import java.util.Scanner;
 
 public class Problem_1 {
 
-    //Display the output to the console
-    public static void output(int numDays, String month, int year)
-    {
-        System.out.println(month + " " + year + " has " + numDays + " days");
-    }
-
     public static void main(String[] args)
     {
         //Declare variables
