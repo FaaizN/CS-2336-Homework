@@ -20,9 +20,9 @@ public class Problem_3 {
         hours = input.nextDouble();
         System.out.print("Enter hourly pay rate: ");
         payRate = input.nextDouble();
-        System.out.println("Enter federal tax withholding rate: ");
+        System.out.print("Enter federal tax withholding rate: ");
         fedTax = input.nextDouble();
-        System.out.println("Enter state tax withholding rate:");
+        System.out.print("Enter state tax withholding rate: ");
         stateTax = input.nextDouble();
 
         //Calculate the Gross pay
@@ -40,11 +40,20 @@ public class Problem_3 {
         //Calculate the netPay
         netPay = grossPay - totalDeduct;
 
+        //Calculate the percentage of federal and state tax
+        double statePerc = stateTax * 100;
+        double fedPerc = fedTax * 100;
+
         //Output the solution
         System.out.println("Employee Name: " + userName);
         System.out.printf("Hours Worked: %.2f\n", hours);
         System.out.printf("Pay Rate: $%.2f\n", payRate);
-        System.out.println();
+        System.out.printf("Gross Pay: $%.1f\n", grossPay);
+        System.out.println("Deductions:");
+        System.out.println("\tFederal Withholding (" + fedPerc + "%): $" + fedHolding);
+        System.out.println("\tFederal Withholding (" + statePerc + "%): $" + stateHolding);
+        System.out.printf("\tTotal Deduction: $%.2f\n", totalDeduct);
+        System.out.printf("Net Pay: $%.2f", netPay);
 
 
     }
