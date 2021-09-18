@@ -9,10 +9,10 @@ public class Problem_5 {
                 principal = 0,balance = 0;
         int years, counter = 1;
 
-        //Create scanner object for user input and store in variables
+        //Create scanner object for user input
         Scanner input = new Scanner(System.in);
 
-        //Prompt user for input
+        //Prompt user for input and store in variables
         System.out.print("Loan Amount: ");
         loan = input.nextDouble();
         System.out.print("Number of Years: ");
