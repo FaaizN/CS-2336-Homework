@@ -6,8 +6,8 @@ public class Problem_5 {
     {
         //Create variables
         double loan, interestRate, monthlyPayment = 0, totalPayment = 0,
-                principal = 0,balance = 0,monthlyInterest = 0;
-        int years, payment, counter = 1;
+                principal = 0,balance = 0;
+        int years, counter = 1;
 
         //Create scanner object for user input
         Scanner input = new Scanner(System.in);
