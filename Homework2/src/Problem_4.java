@@ -5,9 +5,9 @@ public class Problem_4 {
     public static void main(String[] args)
     {
         //Create variables
-        double loan = 0, monthly = 0;
-        int years = 0, numPayments = 0;
-
+        double loan = 0, monthlyPayment,
+               interest = 5.00, totalPayment;
+        int years = 0;
 
         //Create scanner object for user input
         Scanner input = new Scanner(System.in);
@@ -17,18 +17,23 @@ public class Problem_4 {
         loan = input.nextDouble();
         System.out.print("Number of Years: ");
         years = input.nextInt();
-
-        //Calculate monthly payment
-        monthly = (0.05/12) * loan;
-
-        //Calculate the number of payments made
+        System.out.println();
 
 
-        //Create equation to calculate Total Accrued Amount (TAA)
-        double taa =  monthly * numPayments;
+        System.out.println("Interest Rate\tMonthly Payment\t\tTotal Payment\n");
 
-        //Output the total payment
-        System.out.println("Total Payment: " );
+        while(interest <= 8.00)
+        {
+            //Calculate monthly interestRate
+            double monthInterest = interest/1200;
 
+            //Calculate Payment
+            monthlyPayment = loan * monthInterest / (1-1 / Math.pow(1 + monthInterest, years * 12));
+            totalPayment = monthlyPayment * years * 12;
+
+            System.out.printf("%.3f%%\t\t\t%.2f\t\t\t\t%.2f\n", interest, monthlyPayment, totalPayment);
+
+            interest += .125;
+        }
     }
 }
