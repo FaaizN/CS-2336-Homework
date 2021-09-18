@@ -9,7 +9,7 @@ public class Problem_5 {
                 principal = 0,balance = 0;
         int years, counter = 1;
 
-        //Create scanner object for user input
+        //Create scanner object for user input and store in variables
         Scanner input = new Scanner(System.in);
 
         //Prompt user for input
