@@ -32,7 +32,6 @@ public class HW_3_Problem_4 {
             list[i] = input.nextInt();
         }
 
-
         if(isSorted(list) == true)
         {
             System.out.println("The list is already sorted");
