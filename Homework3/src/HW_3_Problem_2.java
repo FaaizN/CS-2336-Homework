@@ -16,12 +16,12 @@ public class HW_3_Problem_2 {
     /** Compute the mean of an array of double values */
     public static double mean(double[] x)
     {
-        double total = 0;
+        double sum = 0;
         for (int i = 0; i < x.length; i++)
         {
-            total += x[i];
+            sum += x[i];
         }
-        return total / x.length;
+        return sum / x.length;
     }
 
     public static void main(String[] args)
