@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class HW_3_Problem_3 {
 
     public static int[] eliminateDuplicates(int[] list)

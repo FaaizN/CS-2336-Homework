@@ -51,7 +51,6 @@ public class HW_3_Problem_5 {
         {
             return first;
         }
-
     }
 
     public static void main(String[] args)

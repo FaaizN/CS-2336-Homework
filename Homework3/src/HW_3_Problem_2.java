@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class HW_3_Problem_2 {
 
     /** Compute the deviation of double values */

@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class HW_3_Problem_1 {
 
