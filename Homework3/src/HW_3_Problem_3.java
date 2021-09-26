@@ -5,38 +5,40 @@ public class HW_3_Problem_3 {
     public static int[] eliminateDuplicates(int[] list)
     {
         //Create variables
-        int[] temp = new int[list.length];
+        int arrayLength = list.length;
+        int[] temp = new int[arrayLength];
         int tempIndex = 0;
-        boolean isDuplicate = false;
+        boolean flag[] = new boolean[list.length];
 
-        //Iterate through first and temp array and if index values == then set bool isDuplicate to true;
+        //Set the flag for duplicate at every index to false
         for (int i = 0; i < list.length; i++)
         {
+            flag[i] = false;
+        }
 
-            for (int k = 0; k < list.length; k++)
+        //Iterate through the list and temp list to determine if there is a duplicate, if so set boolean flag to true
+        for(int i = 0; i < list.length; i++)
+        {
+            for(tempIndex = 0; tempIndex < i; tempIndex++)
             {
-                if (temp[k] == list[i])
+                if(list[i] == list[tempIndex])
                 {
-                    isDuplicate = true;
+                    flag[i] = true;
+                    arrayLength--;
+                    break;
                 }
             }
+        }
 
-            //If isDuplicate is false, set and increment tempIndex for temporary array = to current list index value
-            if (!isDuplicate)
+        //Create array without duplicates
+        for (int i = 0; i < list.length; i++)
+        {
+            if(flag[i] == false)
             {
                 temp[tempIndex++] = list[i];
             }
         }
-
-        //Create a trimmed array that holds all the values of the parameter array without duplicates
-        int[] trimmedArray = new int[tempIndex];
-
-        for (int i = 0; i < tempIndex; i++)
-        {
-            trimmedArray[i] = temp[i];
-        }
-
-        return trimmedArray;
+        return temp;
     }
 
     public static void main(String[] args)
@@ -51,14 +53,14 @@ public class HW_3_Problem_3 {
             numList[i] = input.nextInt();
         }
 
-        //Call function
-        numList = eliminateDuplicates(numList);
+        int [] distinctNum = eliminateDuplicates(numList);
 
         //Display the new array
         System.out.print("The distinct numbers are: ");
-        for(int i = 0; i < numList.length; i++)
+        for(int i : distinctNum)
         {
-            System.out.print(numList[i] + " ");
+            if(i > 0)
+                System.out.print(i + " ");
         }
     }
 }
